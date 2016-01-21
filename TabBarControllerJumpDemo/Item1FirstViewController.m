@@ -17,16 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor blueColor];
-    
-    UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithTitle:@"next" style:UIBarButtonItemStylePlain target:self action:@selector(next)];
-    self.navigationItem.rightBarButtonItem = rightBtn;
-    
-}
-
-- (void)next {
-    Item1SecondViewController *secondViewC = [[Item1SecondViewController alloc] init];
-    [self.navigationController pushViewController:secondViewC animated:YES];
+    self.view.backgroundColor = [UIColor blueColor];    
 }
 
 
