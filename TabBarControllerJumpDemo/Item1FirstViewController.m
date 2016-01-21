@@ -8,6 +8,7 @@
 
 #import "Item1FirstViewController.h"
 #import "Item1SecondViewController.h"
+#import "UIManager.h"
 
 @interface Item1FirstViewController ()
 @end
@@ -17,7 +18,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor blueColor];    
+    self.view.backgroundColor = [UIColor blueColor];
+    
+    UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithTitle:@"next" style:UIBarButtonItemStylePlain target:self action:@selector(next)];
+    self.navigationItem.rightBarButtonItem = rightBtn;
+    
+}
+
+- (void)next {
+    Item1SecondViewController *secondViewC = [[Item1SecondViewController alloc] init];
+    [[UIManager sharedInstance].tabbarViewController.navigationController pushViewController:secondViewC animated:YES];
 }
 
 
